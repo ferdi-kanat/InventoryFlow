@@ -35,10 +35,6 @@ InventoryFlow.UI            → WinForms user interface
 ### Building the Project
 
 ```bash
-# Clone the repository
-git clone https://github.com/ferdi-kanat/InventoryFlow.git
-cd InventoryFlow
-
 # Build the solution
 dotnet build InventoryFlow.sln
 ```
@@ -181,7 +177,7 @@ var productService = InstanceFactory.GetProductService();
 ### Search Functionality
 - Product search uses case-insensitive matching
 - Category filtering available in product views
-- SQL `CONTAINS` used in DAL for name searches
+- LINQ `.Contains()` method used in DAL for name searches
 
 ### Database Context
 - Fresh `DbContext` instance per repository operation
